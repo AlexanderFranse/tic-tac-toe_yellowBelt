@@ -34,5 +34,9 @@ export function sendWinningMessage(board: string[][]): string {
 }
 
 export function isDraw(board: string[][]): boolean {
-  return board.every((row) => row.every((col) => col !== ""));
+  return (
+    !threeSymbolsEqualVertical(board) &&
+    !threeSymbolsEqualsHorizontal(board) &&
+    !threeSymbolsEqualsDiagonal(board)
+  );
 }
