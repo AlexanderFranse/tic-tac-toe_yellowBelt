@@ -20,6 +20,19 @@ export function threeSymbolsEqualsDiagonal(board: string[][]): boolean {
   return mainDiagonal || antiDiagonal;
 }
 
-export function sendWinningMessage(board: string[][]): String {
-  return "Not implemented yet";
+export function sendWinningMessage(board: string[][]): string {
+  if (threeSymbolsEqualVertical(board)) {
+    return "Player X wins!";
+  }
+  if (threeSymbolsEqualsHorizontal(board)) {
+    return "Player O wins!";
+  }
+  if (threeSymbolsEqualsDiagonal(board)) {
+    return "Player X wins!";
+  }
+  return "No winner";
+}
+
+export function isDraw(board: string[][]): boolean {
+  return board.every((row) => row.every((col) => col !== ""));
 }
