@@ -12,7 +12,6 @@ export function threeSymbolsEqualVertical(board: string[][]): boolean {
 export function threeSymbolsEqualsHorizontal(board: string[][]): boolean {
   return board.some((row) => row.every((col) => col === "O"));
 }
-
 export function threeSymbolsEqualsDiagonal(board: string[][]): boolean {
   const mainDiagonal =
     board[0][0] === "X" && board[1][1] === "X" && board[2][2] === "X";

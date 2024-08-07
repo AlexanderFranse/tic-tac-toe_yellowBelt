@@ -89,6 +89,16 @@ describe("Tic tac toe is a game where a player wins when a X or O has been place
       ];
       expect(threeSymbolsEqualsDiagonal(boardWithThreeXDiagonal)).toBe(true);
     });
+    it(`[['0'], [''], ['X']
+         ['O'], ['X'],['']
+         ['X'], [''], ['']] --> true`, () => {
+      const boardWithThreeXDiagonal = [
+        ["0", "", "X"],
+        ["O", "X", ""],
+        ["X", "", ""],
+      ];
+      expect(threeSymbolsEqualsDiagonal(boardWithThreeXDiagonal)).toBe(true);
+    });
     it(`[[''], [''], ['']
          ['O'], ['X'],['']
          ['0'], [''], ['X']] --> false`, () => {
