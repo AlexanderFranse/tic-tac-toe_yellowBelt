@@ -21,7 +21,7 @@
           ['X'], [''], ['O']] --> false
 
 
-🤲 - Player O wins when there are 3 times O next to each other horizontally
+✅ - Player O wins when there are 3 times O next to each other horizontally
          [['X'], [''], [''X]
           ['O'], ['O'],['O']
           ['X'], [''], ['']] --> true

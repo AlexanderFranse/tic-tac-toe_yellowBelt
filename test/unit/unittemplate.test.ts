@@ -55,22 +55,48 @@ describe("Tic tac toe is a game where a player wins when a X or O has been place
     it(`[['X'], [''], ['X']
          ['O'], ['O'],['O']
          ['X'], [''], ['']] --> true`, () => {
-      const boardWithThreeXVertical = [
+      const boardWithThreeOHorizontal = [
         ["X", "", "X"],
         ["O", "O", "O"],
         ["X", "", ""],
       ];
-      expect(threeSymbolsEqualsHorizontal(boardWithThreeXVertical)).toBe(true);
+      expect(threeSymbolsEqualsHorizontal(boardWithThreeOHorizontal)).toBe(
+        true
+      );
     });
     it(`[['X'], [''], ['']
          ['O'], ['O'],['']
          ['X'], [''], ['O']] --> false`, () => {
-      const boardWithThreeXVertical = [
+      const boardWithThreeOHorizontal = [
         ["X", "", "X"],
         ["O", "O", ""],
         ["X", "", ""],
       ];
-      expect(threeSymbolsEqualsHorizontal(boardWithThreeXVertical)).toBe(false);
+      expect(threeSymbolsEqualsHorizontal(boardWithThreeOHorizontal)).toBe(
+        false
+      );
+    });
+  });
+  describe("Player X wins when there are 3 times X on the board diagonally next to each other", () => {
+    it(`[['X'], [''], ['X']
+         ['O'], ['O'],['O']
+         ['X'], [''], ['']] --> true`, () => {
+      const boardWithThreeXDiagonal = [
+        ["X", "", "X"],
+        ["O", "O", "O"],
+        ["X", "", ""],
+      ];
+      expect(threeSymbolsEqualsHorizontal(boardWithThreeXDiagonal)).toBe(true);
+    });
+    it(`[['X'], [''], ['']
+         ['O'], ['O'],['']
+         ['X'], [''], ['O']] --> false`, () => {
+      const boardWithThreeXDiagonal = [
+        ["X", "", "X"],
+        ["O", "O", ""],
+        ["X", "", ""],
+      ];
+      expect(threeSymbolsEqualsHorizontal(boardWithThreeXDiagonal)).toBe(false);
     });
   });
 });
