@@ -5,3 +5,7 @@ export function createBoard(rowsAndColumns: number): string[][] {
 export function boardContainsOnlyXAndOValues(value: string): boolean {
   return value === "X" || value === "O";
 }
+
+export function threeSymbolsEqualVertical(boardWithThreeXVertical: string[][]): undefined {
+  return undefined;
+}
