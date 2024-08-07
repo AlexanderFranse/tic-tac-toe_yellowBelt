@@ -19,20 +19,6 @@ export function threeSymbolsEqualsDiagonal(board: string[][]): boolean {
     board[0][2] === "X" && board[1][1] === "X" && board[2][0] === "X";
   return mainDiagonal || antiDiagonal;
 }
-
-export function sendWinningMessage(board: string[][]): string {
-  if (threeSymbolsEqualVertical(board)) {
-    return "Player X wins!";
-  }
-  if (threeSymbolsEqualsHorizontal(board)) {
-    return "Player O wins!";
-  }
-  if (threeSymbolsEqualsDiagonal(board)) {
-    return "Player X wins!";
-  }
-  return "No winner";
-}
-
 export function isDraw(board: string[][]): boolean {
   return (
     !threeSymbolsEqualVertical(board) &&
