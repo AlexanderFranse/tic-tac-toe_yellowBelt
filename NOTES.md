@@ -6,6 +6,7 @@
 🤲 - Player 1 wins when 3 times X vertical is the same
 
 
+
 ✅ - Validate if board contains X or O only:
         ✅ X --> true
         ✅ O --> true
@@ -21,6 +22,8 @@
           ['X'], [''], ['O']] --> false
 
 
+
+
 ✅ - Player O wins when there are 3 times O next to each other horizontally
          [['X'], [''], [''X]
           ['O'], ['O'],['O']
@@ -32,7 +35,7 @@
 
     🤲 - Player X wins when there are 3 times X next to each other diagonally
          [['X'], [''], ['']
-          ['O'], ['X'],['O']
+          ['O'], ['X'],['']
           ['O'], [''], ['X']] --> true
 
          [[''], [''], ['']

@@ -3,6 +3,7 @@ import {
   boardContainsOnlyXAndOValues,
   threeSymbolsEqualVertical,
   threeSymbolsEqualsHorizontal,
+  threeSymbolsEqualsDiagonal,
 } from "../../src/functions";
 
 describe("Tic tac toe is a game where a player wins when a X or O has been placed 3 times next to each other in a vertical, horizontal or diagonal line. The board contains a grid that is 3x3. When the board is full and it doesnt contain any winning condition, then it is a draw", () => {
@@ -78,25 +79,25 @@ describe("Tic tac toe is a game where a player wins when a X or O has been place
     });
   });
   describe("Player X wins when there are 3 times X on the board diagonally next to each other", () => {
-    it(`[['X'], [''], ['X']
-         ['O'], ['O'],['O']
-         ['X'], [''], ['']] --> true`, () => {
-      const boardWithThreeXDiagonal = [
-        ["X", "", "X"],
-        ["O", "O", "O"],
-        ["X", "", ""],
-      ];
-      expect(threeSymbolsEqualsHorizontal(boardWithThreeXDiagonal)).toBe(true);
-    });
     it(`[['X'], [''], ['']
-         ['O'], ['O'],['']
-         ['X'], [''], ['O']] --> false`, () => {
+         ['O'], ['X'],['']
+         ['0'], [''], ['X']] --> true`, () => {
       const boardWithThreeXDiagonal = [
-        ["X", "", "X"],
-        ["O", "O", ""],
         ["X", "", ""],
+        ["O", "X", ""],
+        ["0", "", "X"],
       ];
-      expect(threeSymbolsEqualsHorizontal(boardWithThreeXDiagonal)).toBe(false);
+      expect(threeSymbolsEqualsDiagonal(boardWithThreeXDiagonal)).toBe(true);
+    });
+    it(`[[''], [''], ['']
+         ['O'], ['X'],['']
+         ['0'], [''], ['X']] --> false`, () => {
+      const boardWithThreeXDiagonal = [
+        ["", "", ""],
+        ["O", "X", ""],
+        ["X", "", "X"],
+      ];
+      expect(threeSymbolsEqualsDiagonal(boardWithThreeXDiagonal)).toBe(false);
     });
   });
 });
