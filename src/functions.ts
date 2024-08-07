@@ -6,14 +6,5 @@ export function boardContainsOnlyXAndOValues(value: string): boolean {
   return value === "X" || value === "O";
 }
 export function threeSymbolsEqualVertical(board: string[][]): boolean {
-  for (let col = 0; col < board[0].length; col += 1) {
-    if (
-      board[0][col] === "X" &&
-      board[1][col] === "X" &&
-      board[2][col] === "X"
-    ) {
-      return true;
-    }
-  }
-  return false;
+  return board[0].some((_, col) => board.every((row) => row[col] === "X"));
 }

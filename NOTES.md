@@ -11,7 +11,7 @@
         O --> true
         A --> false
 
-🤲 - Player 1 wins when 3 times X vertical is the same
+🤲 - Player X wins when there are 3 times X next to each other vertically
          [['X'], [''], ['']
           ['X'], ['O'],['']
           ['X'], [''], ['O']] --> true

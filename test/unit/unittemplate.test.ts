@@ -28,7 +28,7 @@ describe("Tic tac toe is a game where a player wins when a X or O has been place
       expect(boardContainsOnlyXAndOValues("A")).toBe(false);
     });
   });
-  describe("Player 1 wins when 3 times X vertical is the same", () => {
+  describe("Player X wins when there are 3 times X on the board vertically next to each other", () => {
     it(`[['X'], [''], ['']
          ['X'], ['O'],['']
          ['X'], [''], ['O']] --> true`, () => {
