@@ -19,3 +19,7 @@ export function threeSymbolsEqualsDiagonal(board: string[][]): boolean {
     board[0][2] === "X" && board[1][1] === "X" && board[2][0] === "X";
   return mainDiagonal || antiDiagonal;
 }
+
+export function sendWinningMessage(board: string[][]): String {
+  return "Not implemented yet";
+}

@@ -4,6 +4,7 @@ import {
   threeSymbolsEqualVertical,
   threeSymbolsEqualsHorizontal,
   threeSymbolsEqualsDiagonal,
+  sendWinningMessage,
 } from "../../src/functions";
 
 describe("Tic tac toe is a game where a player wins when a X or O has been placed 3 times next to each other in a vertical, horizontal or diagonal line. The board contains a grid that is 3x3. When the board is full and it doesnt contain any winning condition, then it is a draw", () => {
@@ -110,4 +111,55 @@ describe("Tic tac toe is a game where a player wins when a X or O has been place
       expect(threeSymbolsEqualsDiagonal(boardWithThreeXDiagonal)).toBe(false);
     });
   });
+  describe("When a player has won, send a message that player X or O win", () => {
+    it(`[['X'],[''], [''X]
+         ['O'],['O'],['O']
+         ['X'],[''], ['']] --> "PLAYER O WON!"`, () => {
+      const boardWithThreeOHorizontal = [
+        ["X", "", "X"],
+        ["O", "O", "O"],
+        ["X", "", ""],
+      ];
+      expect(sendWinningMessage(boardWithThreeOHorizontal)).toEqual(
+        "PLAYER O WON!"
+      );
+    });
+    it(`[['X'],[''], ['0']
+         ['O'], ['O'],['X']
+         ['0'], [''], ['']] --> "PLAYER O WON!""`, () => {
+      const boardWithThreeOHorizontal = [
+        ["X", "", "O"],
+        ["O", "O", "X"],
+        ["O", "", ""],
+      ];
+      expect(sendWinningMessage(boardWithThreeOHorizontal)).toEqual(
+        "PLAYER O WON!"
+      );
+    });
+    it(`['X'],[''], ['0']
+        ['X'],['O'],['O']
+        ['X'],[''], ['']] --> "PLAYER O WON!"`, () => {
+      const boardWithThreeOHorizontal = [
+        ["X", "", "O"],
+        ["X", "O", "O"],
+        ["X", "", ""],
+      ];
+      expect(sendWinningMessage(boardWithThreeOHorizontal)).toEqual(
+        "PLAYER O WON!"
+      );
+    });
+    it(`[['X'],[''], ['']
+         ['O'],['O'],['O']
+         ['X'],[''], ['']] --> "PLAYER X WON!"`, () => {
+      const boardWithThreeOHorizontal = [
+        ["X", "", "0"],
+        ["O", "X", "O"],
+        ["0", "", "X"],
+      ];
+      expect(sendWinningMessage(boardWithThreeOHorizontal)).toEqual(
+        "PLAYER X WON!"
+      );
+    });
+  });
+  describe("When a player has won, send a message that player X or O win", () => {});
 });

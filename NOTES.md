@@ -33,7 +33,7 @@
           ['O'], ['O'],['']
           ['X'], [''], ['']] --> false
 
-    🤲 - Player X wins when there are 3 times X next to each other diagonally
+    ✅ - Player X wins when there are 3 times X next to each other diagonally
          [['X'], [''], ['']
           ['O'], ['X'],['']
           ['O'], [''], ['X']] --> true
@@ -42,5 +42,23 @@
           ['O'], ['X'],['']
           ['O'], [''], ['X']] --> false
 
-        Send message to winning player
+    🤲 Send message to winning player
             player O --> "PLAYER O WON!"
+
+
+- 🤲 Send message to winning player
+            [['X'],[''], [''X]
+             ['O'],['O'],['O']
+             ['X'],[''], ['']] --> "PLAYER O WON!"
+
+            [['X'],[''], ['0']
+             ['O'], ['O'],['X']
+             ['0'], [''], ['']] --> "PLAYER O WON!"
+
+            [['X'],[''], ['0']
+             ['X'], ['O'],['O']
+             ['X'], [''], ['']] --> "PLAYER X WON!"
+
+            [['X'],[''],['0']
+             ['O'],['X'],['0']
+             ['0'],[''],['X']] --> "PLAYER X WON!"
