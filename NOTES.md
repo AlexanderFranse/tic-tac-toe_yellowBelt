@@ -63,12 +63,12 @@
              ['O'],['X'],['0']
              ['0'],[''],['X']] --> "PLAYER X WON!"
 
-- No winner. Game ends with a draw
-     [['X'], ['O'],['X']
+✅ - No winner. Game ends with a draw
+     ✅ [['X'], ['O'],['X']
       ['O'], ['O'],['X']
       ['X'], ['X'],['O']] --> true
 
-     [['X'], ['O'],['0']
+     ✅ [['X'], ['O'],['0']
       ['X'], ['O'],['X']
       ['X'], ['X'],['O']] --> false
   
