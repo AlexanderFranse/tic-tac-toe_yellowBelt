@@ -7,9 +7,9 @@
 
 
 ✅ - Validate if board contains X or O only:
-        ✅ --> true
-        ✅  --> true
-        ✅ --> false
+        ✅ X --> true
+        ✅ O --> true
+        ✅ A --> false
 
 ✅ - Player X wins when there are 3 times X next to each other vertically
       ✅ [['X'], [''], ['']
